@@ -24,7 +24,7 @@ void keypad_handler(GtkWidget *widget, gpointer p)
 
 void keypad_callback(u_int32_t value, GtkWidget *widget)
 {
-    gchar *tempBuff = malloc(100);
+    gchar tempBuff[100];
     sprintf(tempBuff, "%d", value);
 
     //display entered value in text field
@@ -39,7 +39,6 @@ void keypad_callback(u_int32_t value, GtkWidget *widget)
     {
         g_print("Entered value on password : %d \n", value);
     }
-    free(tempBuff);
 }
 
 int main(int argc, char *argv[])
