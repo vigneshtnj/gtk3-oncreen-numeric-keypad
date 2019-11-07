@@ -1,6 +1,6 @@
 #### GTK ONSCREEN NUMERIC KEYPAD
 
-very useful for touch only developing application on Touch only devices
+very useful for developing application on Touch only devices
 
 
 
