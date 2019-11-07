@@ -1,0 +1,6 @@
+.vscode/
+share/build.ui~
+main
+*.ui~
+*.o
+*.gch
