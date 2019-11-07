@@ -39,6 +39,11 @@ GdkWindow *k_gdk_window;
 GdkDisplay *k_display;
 GtkBuilder *keypad;
 
+void keypadpress_handler(GtkWidget *widget);
+void int_concat(gchar num);
+void int_backspace();
+void keypad_enter()
+
 static void keypadWindowRealize(GtkWidget *window, gpointer data)
 {
     k_display = gdk_display_get_default();
