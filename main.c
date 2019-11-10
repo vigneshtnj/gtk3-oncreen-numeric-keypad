@@ -4,12 +4,17 @@
 #include "keypad-num.h"
 
 GtkWidget *userNameIp, *passwordIp;
-GtkBuilder *builder;
 GError *error = NULL;
 
 void keypad_handler(GtkWidget *widget, gpointer p);
 void keypad_callback(u_int32_t value, GtkWidget *widget);
 
+/**
+ * @brief This is on-click signal function called from kepad.ui file
+ * 
+ * @param widget Pointer to source widget
+ * @param p pointer to user data
+ */
 void keypad_handler(GtkWidget *widget, gpointer p)
 {
     if (widget == userNameIp)
@@ -22,6 +27,12 @@ void keypad_handler(GtkWidget *widget, gpointer p)
     }
 }
 
+/**
+ * @brief This is the callback function to process the entered value
+ * 
+ * @param value Entered value
+ * @param widget Source widget
+ */
 void keypad_callback(u_int32_t value, GtkWidget *widget)
 {
     gchar tempBuff[100];
@@ -43,8 +54,8 @@ void keypad_callback(u_int32_t value, GtkWidget *widget)
 
 int main(int argc, char *argv[])
 {
-    GtkWidget *userInput, *passwordInput;
     GObject *window;
+    GtkBuilder *builder;
 
     gtk_init(&argc, &argv); 
     GtkCssProvider *cssProvider = gtk_css_provider_new();
@@ -65,6 +76,6 @@ int main(int argc, char *argv[])
     keypad_init();
 
     gtk_builder_connect_signals(builder, NULL);
-    gtk_widget_show_all((GtkWidget *)window);
+    gtk_widget_show_all(GTK_WIDGET(window));
     gtk_main();
 }

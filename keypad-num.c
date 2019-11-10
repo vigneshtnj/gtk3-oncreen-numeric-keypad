@@ -16,6 +16,8 @@
 #define KEYUP 13
 #define KEYDOWN 14
 
+typedef void (*callbackFn)(u_int32_t,GtkWidget*);
+
 typedef struct
 {
     u_int32_t data;
