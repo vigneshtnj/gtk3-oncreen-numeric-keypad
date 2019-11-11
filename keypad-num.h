@@ -5,6 +5,7 @@
 #include "main.h"
 #define C_CLAMP(x, low, high, default)  (((x) > (high)) ? (default) : (((x) < (low)) ? (default) : (x)))
 
+typedef void (*callbackFn)(u_int32_t,GtkWidget*);
 
 /**
  * @brief Initialize the Keypad

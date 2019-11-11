@@ -16,7 +16,8 @@
 #define KEYUP 13
 #define KEYDOWN 14
 
-typedef void (*callbackFn)(u_int32_t,GtkWidget*);
+
+
 
 typedef struct
 {
@@ -44,7 +45,7 @@ GtkBuilder *keypad;
 void keypadpress_handler(GtkWidget *widget);
 void int_concat(gchar num);
 void int_backspace();
-void keypad_enter()
+void keypad_enter();
 
 static void keypadWindowRealize(GtkWidget *window, gpointer data)
 {
